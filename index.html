@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Онлайн Курстар</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- Header -->
+  <header class="px-8 py-6 relative z-50 bg-white">
+    <div class="flex items-center justify-between">
+      <div class="flex items-center gap-2 text-lg font-bold text-orange-300">
+        <img src="/logo.png" alt="logo" class="w-16 h-16">
+        ЖРТ
+      </div>
+  
+      <!-- Desktop nav -->
+      <nav class="hidden md:flex gap-6 text-sm font-medium">
+        <a href="/index.html" class="hover:text-orange-500">Башкы бет</a>
+        <a href="#footer" class="hover:text-orange-500">Байланыш</a>
+        <a href="#kurs" class="hover:text-orange-500">Биздин курстар</a>
+      </nav>
+  
+      <!-- Mobile burger -->
+      <button id="menu-toggle" class="md:hidden text-orange-500 focus:outline-none">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2"
+          viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+  
+    <!-- Mobile sidebar -->
+    <div id="mobile-sidebar" class="fixed top-0 left-0 w-64 h-full bg-white shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out z-50 md:hidden">
+      <div class="flex justify-between items-center p-4 border-b">
+        <span class="font-bold text-orange-500 text-lg">Меню</span>
+        <button id="close-sidebar" class="text-gray-600">
+          ✕
+        </button>
+      </div>
+      <nav class="flex flex-col gap-4 p-4 text-sm font-medium">
+        <a href="/index.html" class="hover:text-orange-500">Башкы бет</a>
+        <a href="#footer" class="hover:text-orange-500">Байланыш</a>
+        <a href="#kurs" class="hover:text-orange-500">Биздин курстар</a>
+      </nav>
+    </div>
+  
+    <!-- Overlay -->
+    <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden z-40 md:hidden"></div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="text-center py-20 relative bg-gradient-to-b from-white to-orange-50 overflow-hidden">
+    <!-- Circles background -->
+    <div class="absolute inset-0 flex justify-center items-center z-0">
+      <div class="w-[800px] h-[800px] rounded-full border border-orange-100 absolute"></div>
+      <div class="w-[600px] h-[600px] rounded-full border border-orange-200 absolute"></div>
+      <div class="w-[400px] h-[400px] rounded-full border border-orange-300 absolute"></div>
+      <div class="w-[200px] h-[200px] rounded-full border border-orange-400 absolute"></div>
+    </div>
+
+    <div class="relative z-10 px-6 max-w-3xl mx-auto">
+      <h1 class="text-3xl md:text-5xl font-bold leading-tight mb-6">
+        ЖРТга даярданып, ийгиликке жетиңиз
+      </h1>
+      <p class="text-gray-600 mb-8">
+        Биздин курстар ЖРТга даярданууга эң мыкты мүмкүнчүлүктөрдү сунуштайт. Сиз ар бир сабакта теорияны түшүнүп, практикалык тапшырмаларды аткарып, тестирлөөлөрдү өткөрүп, экзаменге толугу менен даяр болосуз.
+      </p>
+      <div class="overflow-hidden inline-block">
+        <img src="/Webinar-bro.svg" alt="Video Preview" class="w-full" />
+      </div>
+    </div>
+
+    <!-- Волны -->
+    <div class="-mb-20">
+      <svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#FFF7E0" fill-opacity="1" d="M0,160 C360,240 1080,80 1440,160 L1440,320 L0,320 Z"></path>
+        <path fill="#FFF7E0" fill-opacity="0.7" d="M0,200 C480,100 960,300 1440,200 L1440,320 L0,320 Z"></path>
+      </svg>
+    </div>
+  </section>
+
+<!-- Courses Section -->
+<section id="kurs" class="py-12 bg-[#FFF7E0]">
+    <h2 class="text-3xl font-bold text-center mb-8">Биздин курстар</h2>
+  
+    <!-- Grid for courses -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-8">
+      <!-- Course Block: Математика -->
+      <div class="bg-white p-6 shadow-lg rounded-lg text-center">
+        <img src="https://i.pinimg.com/736x/1d/e5/3c/1de53cd67a3efff4f0e14b11a9e56357.jpg   " alt="Математика" class="w-full h-40 object-cover mb-4 rounded-lg">
+        <h3 class="text-2xl font-bold text-orange-500 mb-4">Математика</h3>
+        <p class="text-gray-600 mb-6">Жогорку деңгээлдеги логика жана формулаларды үйрөнүп, ЖРТдагы математика бөлүмүнө мыкты даярдык көрүңүз.</p>
+        <a href="math.html" class="inline-block px-6 py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-600">Киришүү</a>
+      </div>
+
+    <!-- Course Block: Геометрия -->
+<div class="bg-white p-6 shadow-lg rounded-lg text-center">
+  <img src="https://i.pinimg.com/736x/15/ce/df/15cedf65a4e9e67c03a236072549a252.jpg" alt="Геометрия" class="w-full h-40 object-cover mb-4 rounded-lg">
+  <h3 class="text-2xl font-bold text-orange-500 mb-4">Геометрия</h3>
+  <p class="text-gray-600 mb-6">Фигуралар, бурчтар жана теоремалар дүйнөсүнө сүңгүп, логикалык ой жүгүртүүнү өнүктүрүңүз.</p>
+  <a href="geometry.html" class="inline-block px-6 py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-600">Киришүү</a>
+</div>
+
+  
+      <!-- Грамматика -->
+      <div class="bg-white p-6 shadow-lg rounded-lg text-center">
+        <img src="https://i.pinimg.com/736x/19/b8/46/19b8461fb0b210331664185d61ef7fb5.jpg" alt="Грамматика" class="w-full h-40 object-cover mb-4 rounded-lg">
+        <h3 class="text-2xl font-bold text-orange-500 mb-4">Грамматика</h3>
+        <p class="text-gray-600 mb-6">Кыргыз тилинин грамматикалык эрежелерин түшүнүп, туура жазуу көндүмдөрүн калыптандырыңыз.</p>
+        <a href="/grammatika.html" class="inline-block px-6 py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-600">Киришүү</a>
+      </div>
+  
+     
+      <!-- Аналогия, Сүлөм толуктоо -->
+<div class="bg-white p-6 shadow-lg rounded-lg text-center">
+  <img src="https://i.pinimg.com/736x/14/05/16/14051648a933a220c47d9a90a20cc7f6.jpg" alt="Аналогия, Сүлөм толуктоо" class="w-full h-40 object-cover mb-4 rounded-lg">
+  <h3 class="text-2xl font-bold text-orange-500 mb-4">Аналогия, Сүйлөм толуктоо</h3>
+  <p class="text-gray-600 mb-6">Сүйлөмдөрдү логикалык байланыш менен түзүүнү жана ойду так жеткирүүнү үйрөтөбүз.</p>
+  <a href="/analog.html" class="inline-block px-6 py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-600">Киришүү</a>
+</div>
+
+  
+      <!-- Окуу түшүнүү -->
+      <div class="bg-white p-6 shadow-lg rounded-lg text-center">
+        <img src="https://i.pinimg.com/736x/6f/d7/f9/6fd7f9bb1ee17fec234f860dfe006b4f.jpg" alt="Окуу түшүнүү" class="w-full h-40 object-cover mb-4 rounded-lg">
+        <h3 class="text-2xl font-bold text-orange-500 mb-4">Окуу түшүнүү</h3>
+        <p class="text-gray-600 mb-6">Окуган тексти терең түшүнүү жана суроолорго жооп берүү көндүмдөрүн өнүктүрүү.</p>
+        <a href="/okuu.html" class="inline-block px-6 py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-600">Киришүү</a>
+      </div>
+  
+      <!-- Сынама сабактар -->
+      <div class="bg-white p-6 shadow-lg rounded-lg text-center">
+        <img src="https://i.pinimg.com/736x/ed/5e/86/ed5e86fd6b2b5ba2a62075c534db6692.jpg" alt="Сынама сабактар" class="w-full h-40 object-cover mb-4 rounded-lg">
+        <h3 class="text-2xl font-bold text-orange-500 mb-4">Сынама сабактар</h3>
+        <p class="text-gray-600 mb-6">ЖРТга окшош структурадагы тесттер менен билимиңизди текшериңиз.</p>
+        <a href="/test.html" class="inline-block px-6 py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-600">Киришүү</a>
+      </div>
+    </div>
+  </section>
+  
+
+
+  <!-- Font Awesome (иконки) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+<!-- Font Awesome (иконки) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+<!-- Footer -->
+<footer id="footer" class="bg-[#fdf6e7] text-gray-800 pt-12 pb-8 mt-0 border-t border-gray-300">
+  <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+    <!-- Brand & Навигация -->
+    <div>
+      <h2 class="text-2xl font-bold text-orange-500 mb-4">ЖРТ Курстары</h2>
+      <p class="text-sm text-gray-700 mb-4">Сизди ийгиликке жетелеген сапарыңыз ушул жерден башталат.</p>
+      <nav class="flex flex-col gap-2 text-sm">
+        <a href="#" class="hover:text-orange-500 transition">Башкы бет</a>
+        <a href="#kurs" class="hover:text-orange-500 transition">Курстар</a>
+        <a href="#" class="hover:text-orange-500 transition">Биз тууралуу</a>
+        <a href="#" class="hover:text-orange-500 transition">Байланыш</a>
+      </nav>
+    </div>
+
+    <!-- Байланыш -->
+    <div>
+      <h3 class="text-xl font-semibold text-orange-500 mb-4">Байланыш</h3>
+      <ul class="text-sm text-gray-700 space-y-2">
+        <li><i class="fas fa-envelope mr-2 text-orange-400"></i>nurchikk070707@gmail.com</li>
+        <li><i class="fas fa-phone mr-2 text-orange-400"></i>+996 700 800 625</li>
+        <li><i class="fas fa-map-marker-alt mr-2 text-orange-400"></i>Бишкек, Кыргызстан</li>
+      </ul>
+    </div>
+
+<!-- Соц.сети -->
+<div>
+    <h3 class="text-xl font-semibold text-orange-500 mb-4">Биз менен байланыш</h3>
+    <div class="flex gap-6 mt-4">
+      <a href="https://web.telegram.org/k/#@JRTsuroo_bot" target="_blank" class="transition text-2xl text-orange-600 hover:text-orange-400">
+        <i class="fab fa-telegram"></i>
+      </a>
+      <a href="#" target="_blank" class="transition text-2xl text-orange-600 hover:text-orange-400">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="tel:+996700800625" class="transition text-2xl text-orange-600 hover:text-orange-400">
+        <i class="fas fa-phone-alt"></i>
+      </a>
+    </div>
+  </div>
+  
+  
+
+  <!-- Divider -->
+  <div class="border-t border-gray-300 mt-10 pt-6 text-center text-sm text-gray-600">
+    &copy; 2025 ЖРТ. Бардык укуктар корголгон.
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const menuToggle = document.getElementById('menu-toggle');
+    const sidebar = document.getElementById('mobile-sidebar');
+    const closeSidebar = document.getElementById('close-sidebar');
+    const overlay = document.getElementById('overlay');
+
+    function openSidebar() {
+      sidebar.classList.remove('-translate-x-full');
+      overlay.classList.remove('hidden');
+    }
+
+    function close() {
+      sidebar.classList.add('-translate-x-full');
+      overlay.classList.add('hidden');
+    }
+
+    menuToggle.addEventListener('click', openSidebar);
+    closeSidebar.addEventListener('click', close);
+    overlay.addEventListener('click', close);
+  });
+</script>
+  
+</body>
+</html>
