@@ -1,0 +1,1589 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Онлайн Курстар</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- Header -->
+  <header class="px-8 py-6 relative z-50 bg-white">
+    <div class="flex items-center justify-between">
+      <a href="/index.html" class="flex items-center gap-2 text-lg font-bold text-orange-300">
+        <img src="/logo.png" alt="logo" class="w-16 h-16">
+        ЖРТ
+      </a>
+      
+  
+      <!-- Desktop nav -->
+      <nav class="hidden md:flex gap-6 text-sm font-medium">
+        <a href="/index.html" class="hover:text-orange-500">Башкы бет</a>
+      </nav>
+  
+      <!-- Mobile burger -->
+      <button id="menu-toggle" class="md:hidden text-orange-500 focus:outline-none">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2"
+          viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+  
+    <!-- Mobile sidebar -->
+    <div id="mobile-sidebar" class="fixed top-0 left-0 w-64 h-full bg-white shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out z-50 md:hidden">
+      <div class="flex justify-between items-center p-4 border-b">
+        <span class="font-bold text-orange-500 text-lg">Меню</span>
+        <button id="close-sidebar" class="text-gray-600">
+          ✕
+        </button>
+      </div>
+      <nav class="flex flex-col gap-4 p-4 text-sm font-medium">
+        <a href="/index.html" class="hover:text-orange-500">Башкы бет</a>
+        <a href="#" class="hover:text-orange-500">Байланыш</a>
+        <a href="/index.html#kurs" class="hover:text-orange-500">Курстар</a>
+      </nav>
+    </div>
+  
+    <!-- Overlay -->
+    <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden z-40 md:hidden"></div>
+  </header>
+  
+  
+
+  <!-- Hero Section -->
+  <section class="text-center py-20 relative ">
+    <!-- Circles background -->
+    <div class="absolute inset-0 flex justify-center items-center z-0">
+      <div class="w-[500px] h-[500px] rounded-full border border-orange-100 absolute"></div>
+      <div class="w-[400px] h-[400px] rounded-full border border-orange-200 absolute"></div>
+      <div class="w-[300px] h-[300px] rounded-full border border-orange-300 absolute"></div>
+      <div class="w-[150px] h-[150px] rounded-full border border-orange-400 absolute"></div>
+    </div>
+
+    <div class="relative z-10 px-6 max-w-3xl mx-auto">
+      <h1 class="text-3xl md:text-5xl font-bold leading-tight mb-6">
+        Математика
+      </h1>
+      <p class="text-gray-600 mb-8">
+        Жогорку деңгээлдеги логика жана формулаларды үйрөнүп, ЖРТдагы математика бөлүмүнө мыкты даярдык көрүңүз.
+      </p>
+    </div>
+  </section>
+
+
+
+  <div class="max-w-4xl mx-auto px-6 mt-20">
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Сабактын темасы боюнча издөө..."
+      class="w-full p-3 border border-orange-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-400"/>
+  </div>
+
+
+
+  <!-- Courses Section -->
+  <section class="bg-[#FFF7E0] py-12 bg-gradient-to-b from-white to-orange-100 mt-12">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Course 1 -->
+      <div class="course-section mb-8">
+        <h2 class="text-2xl font-bold text-orange-500">1-БӨЛҮМ НАТУРАЛДЫК САН</h2>
+        <button class="toggle-btn text-sm text-gray-600">Ачуу ▼</button>
+        <div class="topics-list hidden pl-4">
+          <ul>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_1_1" />
+                <a href="https://www.youtube.com/watch?v=si_vgLjjGV0" class="text-blue-500 hover:underline">1-сабак (Киришүү)</a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_1_2" />
+                <a href="https://youtu.be/5D8jQj6bXQI" class="text-blue-500 hover:underline">2-сабак (Сандардын бөлүнүүчүлүк касиеттери)</a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_1_3" />
+                <a href="https://youtu.be/F0b382tdYLA" class="text-blue-500 hover:underline">3-сабак (Так жана жуп сандар)</a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_1_4" />
+                <a href="https://youtu.be/LEw3Cx_41O8" class="text-blue-500 hover:underline">4-сабак (Жөнөкөй жана курама сандар)</a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_1_5" />
+                <a href="https://youtu.be/wBzFeOgb0lE" class="text-blue-500 hover:underline">5-сабак (Удаалаш сандар)</a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_1_6" />
+                <a href="https://youtu.be/QXVC2TdQfW0" class="text-blue-500 hover:underline">6-сабак (Арифметикалык орто сан)</a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_1_7" />
+                <a href="https://youtu.be/TRfQiLXxv64" class="text-blue-500 hover:underline">7-сабак (Жөнөкөй көбөйтүүчүлөргө ажыратуу)</a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_1_8" />
+                <a href="https://youtu.be/hmpcxBcOhW4" class="text-blue-500 hover:underline">8-сабак (ЖРТ ПРАКТИКА 1) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_1_9" />
+                <a href="https://youtu.be/6Fh0C0oqj7s" class="text-blue-500 hover:underline">9-сабак (ЖРТ ПРАКТИКА 2)</a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_1_10" />
+                <a href="https://youtu.be/yfjOdF4r7SA" class="text-blue-500 hover:underline">10-сабак (ЭЧЖБ) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_1_11" />
+                <a href="https://youtu.be/JE1G8UU4ZTE" class="text-blue-500 hover:underline">11-сабак (ЭКЖБ) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_1_12" />
+                <a href="https://youtu.be/pANgGKU0__0" class="text-blue-500 hover:underline">12-сабак (ЖРТ ПРАКТИКА 3)</a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_1_13" />
+                <a href="https://youtu.be/aRJ4XIPDME4" class="text-blue-500 hover:underline">13-сабак (ЖРТ ПРАКТИКА 4) </a>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Course 2 -->
+      <div class="course-section mb-8">
+        <h2 class="text-2xl font-bold text-orange-500">2-БӨЛҮМ БҮТҮН САНДАР</h2>
+        <button class="toggle-btn text-sm text-gray-600">Ачуу ▼</button>
+        <div class="topics-list hidden pl-4">
+          <ul>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_2_1" />
+                <a href="https://youtu.be/n89p_gBKVDc" class="text-blue-500 hover:underline">1-сабак (Z жөнүндө түшүнүк) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_2_2" />
+                <a href="https://youtu.be/pkw5LECtngw" class="text-blue-500 hover:underline">2-сабак (Бүтүн сандарды кошуу жана кемитүү)</a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_2_3" />
+                <a href="https://youtu.be/foNCdfJ_siw" class="text-blue-500 hover:underline">3-сабак (Бүтүн сандарды көбөйтүү жана бөлүү)</a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_2_4" />
+                <a href="https://youtu.be/Y4nMcaIhRtg" class="text-blue-500 hover:underline">4-сабак (Нөлдү көбөйтүү жана бөлүү)</a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_2_5" />
+                <a href="https://youtu.be/LYOSz-xiXko" class="text-blue-500 hover:underline">5-сабак (Бүтүн сандар менен болгон даражалар) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_2_6" />
+                <a href="https://youtu.be/hWu1n2K-fiQ" class="text-blue-500 hover:underline">6-көнүгүү сабак (Кошуу жана кемитүү)</a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_2_7" />
+                <a href="https://youtu.be/55ZDzoq0BWw" class="text-blue-500 hover:underline">7-көнүгүү сабак (Көбөйтүү жана бөлүү)</a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_2_8" />
+                <a href="https://youtu.be/iqSK5nq5pj4" class="text-blue-500 hover:underline">8-көнүгүү сабак (Даража) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_2_9" />
+                <a href="https://youtu.be/3zGn786YLoE" class="text-blue-500 hover:underline">9-көнүгүү сабак (Жалпы көнүгүү)</a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_2_10" />
+                <a href="https://youtu.be/WvNz9zPTUI0" class="text-blue-500 hover:underline">10-көнүгүү сабак (Салыштыруу)</a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_2_11" />
+                <a href="https://youtu.be/wy-hV9mnCG0" class="text-blue-500 hover:underline">11-көнүгүү сабак (Колонка салыштыруу) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_2_12" />
+                <a href="https://youtu.be/4KkOwPV9bF0" class="text-blue-500 hover:underline">12-көнүгүү сабак (ЖРТ ПРАКТИКА 1)</a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_2_13" />
+                <a href="https://youtu.be/GyWpwHZZxY8" class="text-blue-500 hover:underline">13-көнүгүү сабак (ЖРТ ПРАКТИКА 2) </a>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Course 3 -->
+      <div class="course-section mb-8">
+        <h2 class="text-2xl font-bold text-orange-500">3-БӨЛҮМ САЛЫШТЫРУУ ЫКМАЛАРЫ</h2>
+        <button class="toggle-btn text-sm text-gray-600">Ачуу ▼</button>
+        <div class="topics-list hidden pl-4">
+          <ul>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_3_1" />
+                <a href="https://youtu.be/kAVezNDEtFk" class="text-blue-500 hover:underline">1-сабак (Колонкаларды салыштыруу) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_3_2" />
+                <a href="https://youtu.be/TvFble_crYw" class="text-blue-500 hover:underline">2-көнүгүү сабак (Колонкаларды салыштыруу) </a>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Course 4 -->
+      <div class="course-section mb-8">
+        <h2 class="text-2xl font-bold text-orange-500">4-БӨЛҮМ ЖӨНӨКӨЙ БӨЛЧӨКТӨР</h2>
+        <button class="toggle-btn text-sm text-gray-600">Ачуу ▼</button>
+        <div class="topics-list hidden pl-4">
+          <ul>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_4_1" />
+                <a href="https://youtu.be/6d9gPDBmhwY" class="text-blue-500 hover:underline">1-сабак (Жалпы түшүнүк) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_4_2" />
+                <a href="https://youtu.be/J9gqhIVdBlo" class="text-blue-500 hover:underline">2-сабак (Бөлүмдөрү бирдей ЖБ кошуу жана кемитүү) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_4_3" />
+                <a href="https://youtu.be/Lf6tqtY_d1Q" class="text-blue-500 hover:underline">3-сабак (Аралаш санды кошуу жана кемитүү) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_4_4" />
+                <a href="https://youtu.be/Rc0LgKT7QAo" class="text-blue-500 hover:underline">4-сабак (Аралашка айландыруу) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_4_5" />
+                <a href="https://youtu.be/5vGKANZGooc" class="text-blue-500 hover:underline">5-сабак (Жөнөкөй бөлчөктөрдүн касиеттери)</a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_4_6" />
+                <a href="https://youtu.be/M2Ke-XgSGgg" class="text-blue-500 hover:underline">6-сабак (Бөлчөктөрдү кыскартуу)</a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_4_7" />
+                <a href="https://youtu.be/9MnHqXQnzmY" class="text-blue-500 hover:underline">7-сабак (Аралаш санды бурушка өткөрүү) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_4_8" />
+                <a href="https://youtu.be/Wa6VsXpzDcs" class="text-blue-500 hover:underline">8-сабак (Бөлүмдөрү ар башка ЖБ кошуу) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_4_9" />
+                <a href="https://youtu.be/fcwJITVRR58" class="text-blue-500 hover:underline">9-сабак (Аралаш санды кемитүү) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_4_10" />
+                <a href="https://youtu.be/UVT1XAJgVOQ" class="text-blue-500 hover:underline">10-сабак (Жалпы көнүгүү) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_4_11" />
+                <a href="https://youtu.be/-nI_X3c7cpY" class="text-blue-500 hover:underline">11-сабак (Жөнөкөй бөлчөктөрдү көбөйтүү) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_4_12" />
+                <a href="https://youtu.be/NHL_K3yuh3g" class="text-blue-500 hover:underline">12-сабак (Жөнөкөй бөлчөктөрдү бөлүү)</a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_4_13" />
+                <a href="https://youtu.be/vFn7gHKhiyI" class="text-blue-500 hover:underline">13-сабак (Жөнөкөй бөлчөктөрдү салыштыруу) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_4_14" />
+                <a href="https://youtu.be/MRWY0qJKEp0" class="text-blue-500 hover:underline">14-сабак (Жөнөкөй бөлчөктүн даражасы) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_4_15" />
+                <a href="https://youtu.be/LKmB9255sas" class="text-blue-500 hover:underline">15-көнүгүү сабак (Аралаш санга айландыруу) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_4_16" />
+                <a href="https://youtu.be/NlKb6tVhzB4" class="text-blue-500 hover:underline">16-көнүгүү сабак (Буруш бөлчөккө айландыруу айландыруу) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_4_17" />
+                <a href="https://youtu.be/E8gmE70AS3A" class="text-blue-500 hover:underline">17-көнүгүү сабак (Бөлчөктөрдү кыскартуу)</a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_4_18" />
+                <a href="https://youtu.be/ZRe62kS9wrI" class="text-blue-500 hover:underline">18-көнүгүү сабак (Бөлчөктөрдү салыштыруу)</a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_4_19" />
+                <a href="https://youtu.be/eLBxa07SI-8" class="text-blue-500 hover:underline">19-көнүгүү сабак (ЖБ кошуу жана кемитүү) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_4_20" />
+                <a href="https://youtu.be/Kzz5iF-G_oo" class="text-blue-500 hover:underline">20-көнүгүү сабак (ЖБ даражалары) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_4_21" />
+                <a href="https://youtu.be/M3JAnXwKPmU" class="text-blue-500 hover:underline">21-көнүгүү сабак (ЖБ көбөйтүү жана бөлүү)</a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_4_22" />
+                <a href="https://youtu.be/VV0JqMVxBgY" class="text-blue-500 hover:underline">22-көнүгүү сабак (ЖРТ практика 1)</a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_4_23" />
+                <a href="https://youtu.be/pbN57133wrg" class="text-blue-500 hover:underline">23-көнүгүү сабак (ЖРТ практика 2)</a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_4_24" />
+                <a href="https://youtu.be/dpfpB6YPg3w" class="text-blue-500 hover:underline">24-көнүгүү сабак (ЖРТ практика 3)</a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_4_25" />
+                <a href="https://youtu.be/Q_d7kWLdBOQ" class="text-blue-500 hover:underline">25-көнүгүү сабак (ЖРТ практика 4) </a>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Course 5 -->
+      <div class="course-section mb-8">
+        <h2 class="text-2xl font-bold text-orange-500">5-БӨЛҮМ ОНДУК БӨЛЧӨКТӨР</h2>
+        <button class="toggle-btn text-sm text-gray-600">Ачуу ▼</button>
+        <div class="topics-list hidden pl-4">
+          <ul>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_5_1" />
+                <a href="https://youtu.be/1uyVmNbuVwY" class="text-blue-500 hover:underline">1-сабак (Ондук бөлчөккө киришүү)</a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_5_2" />
+                <a href="https://youtu.be/GBhEeKfXTOE" class="text-blue-500 hover:underline">2-сабак (Жөнөкөй бөлчөктөн ондук бөлчөккө)</a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_5_3" />
+                <a href="https://youtu.be/rFPKCkREiAs" class="text-blue-500 hover:underline">3-сабак (ОБ мамыча түрүндө кошуу жана кемитүү)</a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_5_4" />
+                <a href="https://youtu.be/1sEu9mNDsVk" class="text-blue-500 hover:underline">4-сабак (ОБ көбөйтүү) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_5_5" />
+                <a href="https://youtu.be/VibAKFWFC3I" class="text-blue-500 hover:underline">5-сабак (ОБ бөлүү)</a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_5_6" />
+                <a href="https://youtu.be/rF6be2AjdUk" class="text-blue-500 hover:underline">6-сабак (Салыштыруу)</a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_5_7" />
+                <a href="https://youtu.be/aoyB_siObLk" class="text-blue-500 hover:underline">7-сабак (Ондук бөлчөктүн бүтүн жана бөлчөк бөлүгү)</a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_5_8" />
+                <a href="https://youtu.be/1IemkZbqbcE" class="text-blue-500 hover:underline">8-көнүгүү сабак (Жөнөкөй бөлчөктөн ондук бөлчөккө)</a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_5_9" />
+                <a href="https://youtu.be/7qNxtpzE-sw" class="text-blue-500 hover:underline">9-көнүгүү сабак (ОБ кошуу жана кемитүү) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_5_10" />
+                <a href="https://youtu.be/eTU-K5Rpnk4" class="text-blue-500 hover:underline">10-көнүгүү сабак (ОБ көбөйтүү жана бөлүү)</a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_5_11" />
+                <a href="https://youtu.be/aMymDft6jDU" class="text-blue-500 hover:underline">11-көнүгүү сабак (ондун даражаларына көбөйтүү жана бөлүү) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_5_12" />
+                <a href="https://youtu.be/MiA3aKKDFB8" class="text-blue-500 hover:underline">12-көнүгүү сабак (ЖРТ практика 1)</a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_5_13" />
+                <a href="https://youtu.be/S8FD5RaSCIQ" class="text-blue-500 hover:underline">13-көнүгүү сабак (ЖРТ практика 2) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_5_14" />
+                <a href="https://youtu.be/oNciUelv7pA" class="text-blue-500 hover:underline">14-көнүгүү сабак (ЖРТ практика 3)</a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_5_15" />
+                <a href="https://youtu.be/Ntf1b0pDzSg" class="text-blue-500 hover:underline">15-көнүгүү сабак (ЖРТ практика 4) </a>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Course 6 -->
+      <div class="course-section mb-8">
+        <h2 class="text-2xl font-bold text-orange-500">6-БӨЛҮМ КАШААЛАРДЫ ТУУРА АЧУУ</h2>
+        <button class="toggle-btn text-sm text-gray-600">Ачуу ▼</button>
+        <div class="topics-list hidden pl-4">
+          <ul>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_6_1" />
+                <a href="https://youtu.be/yxYzwKipYhA" class="text-blue-500 hover:underline">1-сабак (кашааларды туура ачуу) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_6_2" />
+                <a href="https://youtu.be/fQo3yOdH_UI" class="text-blue-500 hover:underline">2-көнүгүү сабак (кашааларды туура ачуу) </a>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Course 7 -->
+      <div class="course-section mb-8">
+        <h2 class="text-2xl font-bold text-orange-500">7-БӨЛҮМ КӨП МҮЧӨЛӨР</h2>
+        <button class="toggle-btn text-sm text-gray-600">Ачуу ▼</button>
+        <div class="topics-list hidden pl-4">
+          <ul>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_7_1" />
+                <a href="https://youtu.be/UM86BU54-X8" class="text-blue-500 hover:underline">1-сабак (Көп мүчөлөр жөнүндө түшүнүк)</a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_7_2" />
+                <a href="https://youtu.be/NEjFnFvA46g" class="text-blue-500 hover:underline">2-сабак (Көп мүчөлөрдү кошуу жана кемитүү)</a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_7_3" />
+                <a href="https://youtu.be/Ebu7emmgU-M" class="text-blue-500 hover:underline">3-сабак (Көп мүчөлөр көбөйтүү ККФ)</a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_7_4" />
+                <a href="https://youtu.be/chJNzdsWDuk" class="text-blue-500 hover:underline">4-көнүгүү сабак (Көп мүчөлөрдү кошуу жана кемитүү) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_7_5" />
+                <a href="https://youtu.be/QczHMksN-o4" class="text-blue-500 hover:underline">5-көнүгүү сабак (Көп мүчөлөрдү көбөйтүү) </a>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Course 8 -->
+      <div class="course-section mb-8">
+        <h2 class="text-2xl font-bold text-orange-500">8-БӨЛҮМ ТЕҢДЕМЕЛЕР</h2>
+        <button class="toggle-btn text-sm text-gray-600">Ачуу ▼</button>
+        <div class="topics-list hidden pl-4">
+          <ul>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_8_1" />
+                <a href="https://youtu.be/FbqnBqxnoXY" class="text-blue-500 hover:underline">1-сабак (Теңдемелерге киришүү) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_8_2" />
+                <a href="https://youtu.be/GZ9McfB8Pdg" class="text-blue-500 hover:underline">2-сабак (Бир өзгөрмөлүү сызыктуу теңдемелер) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_8_3" />
+                <a href="https://youtu.be/KrbS-aJYgog" class="text-blue-500 hover:underline">3-сабак (Теңдемелерди тереңдеп изилдейбиз)</a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_8_4" />
+                <a href="https://youtu.be/b5C2VTAfiYk" class="text-blue-500 hover:underline">4-сабак (Теңдемелерди тереңдеп изилдейбиз 2)</a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_8_5" />
+                <a href="https://youtu.be/MfjEr6Bt7wU" class="text-blue-500 hover:underline">5-көнүгүү сабак (Теңдемелерге көнүгүү)</a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_8_6" />
+                <a href="https://youtu.be/zrzqAnUhZT0" class="text-blue-500 hover:underline">6-көнүгүү сабак (Теңдемелерге көнүгүү 2) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_8_7" />
+                <a href="https://youtu.be/QHRiDUxyLWI" class="text-blue-500 hover:underline">7-көнүгүү сабак (Теңдемелерге көнүгүү 3) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_8_8" />
+                <a href="https://youtu.be/-uZ5WXKFfoc" class="text-blue-500 hover:underline">8-көнүгүү сабак (Теңдемелерге көнүгүү 4) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_8_9" />
+                <a href="https://youtu.be/MFDzFu8Aqz0" class="text-blue-500 hover:underline">9-сабак (Формуланы өзгөртүп түзүү) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_8_10" />
+                <a href="https://youtu.be/G6xR3dZVcLE" class="text-blue-500 hover:underline">10-көнүгүү сабак (Формуланы өзгөртүп түзүүгө көнүгүү)</a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_8_11" />
+                <a href="https://youtu.be/IIjdQ9pEweo" class="text-blue-500 hover:underline">11-көнүгүү сабак (ЖРТ практика 1) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_8_12" />
+                <a href="https://youtu.be/vyTd91BCqcg" class="text-blue-500 hover:underline">12-көнүгүү сабак (ЖРТ практика 2) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_8_13" />
+                <a href="https://youtu.be/5M264eUMJog" class="text-blue-500 hover:underline">13-көнүгүү сабак (ЖРТ практика 3) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_8_14" />
+                <a href="https://www.youtube.com/watch?v=your_video_link_2" class="text-blue-500 hover:underline">14-көнүгүү сабак (ЖРТ практика 4) </a>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Course 9 -->
+      <div class="course-section mb-8">
+        <h2 class="text-2xl font-bold text-orange-500">9-БӨЛҮМ БАРАБАРСЫЗДЫКТАР</h2>
+        <button class="toggle-btn text-sm text-gray-600">Ачуу ▼</button>
+        <div class="topics-list hidden pl-4">
+          <ul>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_9_1" />
+                <a href="https://youtu.be/5P7NQ2PEssw" class="text-blue-500 hover:underline">1-сабак (Сан аралыгы) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_9_2" />
+                <a href="https://youtu.be/nNtpse8R_tM" class="text-blue-500 hover:underline">2-сабак (Барабарсыздыктын өзү) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_9_3" />
+                <a href="https://youtu.be/Lg5UHUBarMw" class="text-blue-500 hover:underline">3-сабак (Кош барабарсыздык) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_9_4" />
+                <a href="https://youtu.be/3mGpdNSZWa8" class="text-blue-500 hover:underline">4-сабак (сызыктуу барабарсыздыктар) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_9_5" />
+                <a href="https://youtu.be/lu9fwH_PIEA" class="text-blue-500 hover:underline">5-сабак (сызыктуу кош барабарсыздыктар) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_9_6" />
+                <a href="https://youtu.be/OiqAj5yr_ms" class="text-blue-500 hover:underline">6-сабак (кош барабарсыздыктарды кошуу жана кемитүү) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_9_7" />
+                <a href="https://youtu.be/JM7XOPlwlrA" class="text-blue-500 hover:underline">7-сабак (эки кош барабарсыздыктарды көбөйтүү жана бөлүү) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_9_8" />
+                <a href="https://youtu.be/-aJ8oeWq71c" class="text-blue-500 hover:underline">8-сабак (ЖРТ практика 1)</a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_9_9" />
+                <a href="https://youtu.be/BdPT59UwLu0" class="text-blue-500 hover:underline">9-сабак (ЖРТ практика 2) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_9_10" />
+                <a href="https://youtu.be/gEkD8PIfbIs" class="text-blue-500 hover:underline">10-сабак (ЖРТ практика 3) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_9_11" />
+                <a href="https://youtu.be/SeDoOGXrm2g" class="text-blue-500 hover:underline">11-сабак (ЖРТ практика 4) </a>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Course 10 -->
+      <div class="course-section mb-8">
+        <h2 class="text-2xl font-bold text-orange-500">10-БӨЛҮМ МОДУЛЬ</h2>
+        <button class="toggle-btn text-sm text-gray-600">Ачуу ▼</button>
+        <div class="topics-list hidden pl-4">
+          <ul>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_10_1" />
+                <a href="https://youtu.be/vZopD7KrxtQ" class="text-blue-500 hover:underline">1-сабак (Модулга киришүү) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_10_2" />
+                <a href="https://youtu.be/OcQy5scgHr8" class="text-blue-500 hover:underline">2-сабак (Модулду камтыган теңдеме) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_10_3" />
+                <a href="https://youtu.be/G5sf9ge3vWE" class="text-blue-500 hover:underline">3-сабак (Модулду камтыган барабарсыздык) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_10_4" />
+                <a href="https://youtu.be/cUBc301UQLc" class="text-blue-500 hover:underline">4-көнүгүү сабак (ЖРТ практика 1) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_10_5" />
+                <a href="https://youtu.be/DQMmTXlrLJM" class="text-blue-500 hover:underline">5-көнүгүү сабак (ЖРТ практика 2) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_10_6" />
+                <a href="https://youtu.be/CWOG-_EiDE0" class="text-blue-500 hover:underline">6-көнүгүү сабак (ЖРТ практика 3) </a>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Course 11 -->
+      <div class="course-section mb-8">
+        <h2 class="text-2xl font-bold text-orange-500">11-БӨЛҮМ ГРАФИК</h2>
+        <button class="toggle-btn text-sm text-gray-600">Ачуу ▼</button>
+        <div class="topics-list hidden pl-4">
+          <ul>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_11_1" />
+                <a href="https://youtu.be/M-ZnaMYIAZY" class="text-blue-500 hover:underline">1-сабак (Координаталар системасы менен таанышуу) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_11_2" />
+                <a href="https://youtu.be/M-ZnaMYIAZY" class="text-blue-500 hover:underline">2-сабак (КСна кесинди түшүрүү) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_11_3" />
+                <a href="https://youtu.be/tS6HIQZMJU4" class="text-blue-500 hover:underline">3-сабак (Эки өзгөрмөлүү теңдеме) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_11_4" />
+                <a href="https://youtu.be/dYuKrkNrYAY" class="text-blue-500 hover:underline">4-сабак (Эки өзгөрмөлүү сызыктуу теңдеменин графиги) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_11_5" />
+                <a href="https://youtu.be/YNEJ3Jb_c3M" class="text-blue-500 hover:underline">5-сабак (Сызыктуу функциянын стандарттуу көрүнүшү)</a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_11_6" />
+                <a href="https://youtu.be/TjywbUu7e_Q" class="text-blue-500 hover:underline">6-сабак (Функциянын графиги) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_11_7" />
+                <a href="https://youtu.be/ari2UJ0rf2k" class="text-blue-500 hover:underline">7-сабак (y=kx өңдүү теңдеме) </a>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Course 12 -->
+      <div class="course-section mb-8">
+        <h2 class="text-2xl font-bold text-orange-500">12-БӨЛҮМ ТЕҢДЕМЕЛЕР СИСТЕМАСЫ</h2>
+        <button class="toggle-btn text-sm text-gray-600">Ачуу ▼</button>
+        <div class="topics-list hidden pl-4">
+          <ul>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_12_1" />
+                <a href="https://youtu.be/AGbSWPvwi-A" class="text-blue-500 hover:underline">1-сабак (СТС киришүү) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_12_2" />
+                <a href="https://youtu.be/rV1LbtQPk20" class="text-blue-500 hover:underline">2-сабак (СТС график аркылуу чыгаруу) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_12_3" />
+                <a href="https://youtu.be/3QNB7u4Qjqk" class="text-blue-500 hover:underline">3-сабак (СТС ордуна коюу ыкмасы) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_12_4" />
+                <a href="https://youtu.be/KWcs24Az5qQ" class="text-blue-500 hover:underline">4-сабак (СТС ордуна коюу ыкмасы 2) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_12_5" />
+                <a href="https://youtu.be/3RnA_JeRXVc" class="text-blue-500 hover:underline">5-сабак (СТС кошуу ыкмасы) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_12_6" />
+                <a href="https://youtu.be/-gO1kGu4IXQ" class="text-blue-500 hover:underline">6-сабак (СТС кошуу ыкмасы 2) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_12_7" />
+                <a href="https://youtu.be/agrmqtxxxgM" class="text-blue-500 hover:underline">7-сабак (ЖРТ практика 1) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_12_8" />
+                <a href="https://youtu.be/3toj6vq_BFA" class="text-blue-500 hover:underline">8-сабак (ЖРТ практика 2) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_12_9" />
+                <a href="https://youtu.be/olSUyaCr1cI" class="text-blue-500 hover:underline">9-сабак (ЖРТ практика 3) </a>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Course 13 -->
+      <div class="course-section mb-8">
+        <h2 class="text-2xl font-bold text-orange-500">13-БӨЛҮМ МАСЕЛЕГЕ КИРИШҮҮ</h2>
+        <button class="toggle-btn text-sm text-gray-600">Ачуу ▼</button>
+        <div class="topics-list hidden pl-4">
+          <ul>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_13_1" />
+                <a href="https://youtu.be/HYkrHKXHKpA" class="text-blue-500 hover:underline">1-сабак (Маселелерди чыгарууга жардам берүүчү түшүнүктөр) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_13_2" />
+                <a href="https://youtu.be/HsC2SM4DZQI" class="text-blue-500 hover:underline">2-сабак (ЖРТнын маселелери 1) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_13_3" />
+                <a href="https://youtu.be/aJ5NN8o7FK8" class="text-blue-500 hover:underline">3-сабак (ЖРТнын маселелери 2) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_13_4" />
+                <a href="https://youtu.be/MbUbZf3OMrA" class="text-blue-500 hover:underline">4-сабак (ЖРТнын маселелери 3) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_13_5" />
+                <a href="https://youtu.be/4e3_-VjQbJA" class="text-blue-500 hover:underline">5-сабак (ЖРТнын маселелери 4) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_13_6" />
+                <a href="https://youtu.be/BG1eK-4v4oQ" class="text-blue-500 hover:underline">6-сабак (ЖРТнын маселелери 5) </a>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Course 14 -->
+      <div class="course-section mb-8">
+        <h2 class="text-2xl font-bold text-orange-500">14-БӨЛҮМ КАТЫШ ЖАНА ПРОПОРЦИЯ</h2>
+        <button class="toggle-btn text-sm text-gray-600">Ачуу ▼</button>
+        <div class="topics-list hidden pl-4">
+          <ul>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_14_1" />
+                <a href="https://youtu.be/nvHAzqdycLw" class="text-blue-500 hover:underline">1-cабак (Катыш жана пропорция киришүү) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_14_2" />
+                <a href="https://youtu.be/2jbmPRnqWHw" class="text-blue-500 hover:underline">2-cабак (көнүгүү сабак) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_14_3" />
+                <a href="https://youtu.be/-w8GREWPhVM" class="text-blue-500 hover:underline">3-cабак (ЖРТ практика 1) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_14_4" />
+                <a href="https://youtu.be/f0Kub09WXTE" class="text-blue-500 hover:underline">4-cабак (ЖРТ практика 2) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_14_5" />
+                <a href="https://youtu.be/tR41T0Cs3jI" class="text-blue-500 hover:underline">5-cабак (ЖРТ практика 2) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_14_6" />
+                <a href="https://youtu.be/i4SL5kr4LdY" class="text-blue-500 hover:underline">6-cабак (ЖРТ практика 4) </a>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Course 15 -->
+      <div class="course-section mb-8">
+        <h2 class="text-2xl font-bold text-orange-500">15-БӨЛҮМ ПАЙЫЗ</h2>
+        <button class="toggle-btn text-sm text-gray-600">Ачуу ▼</button>
+        <div class="topics-list hidden pl-4">
+          <ul>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_15_1" />
+                <a href="https://youtu.be/j2V2CAIX6JE" class="text-blue-500 hover:underline">1-сабак (Пайызга киришүү) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_15_2" />
+                <a href="https://youtu.be/SXnrd2e3l_Y" class="text-blue-500 hover:underline">2-сабак (Пайызга көнүгүүлөр) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_15_3" />
+                <a href="https://youtu.be/iXFUSDhN13I" class="text-blue-500 hover:underline">3-сабак (Пайызга көнүгүүлөр 2) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_15_4" />
+                <a href="https://youtu.be/4IKtqj0fNrI" class="text-blue-500 hover:underline">4-сабак (ЖРТ ПРАКТИКА 1) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_15_5" />
+                <a href="https://youtu.be/5DN1Jef_zTE" class="text-blue-500 hover:underline">5-сабак (ЖРТ ПРАКТИКА 2) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_15_6" />
+                <a href="https://youtu.be/_tWYqHe0lfk" class="text-blue-500 hover:underline">6-сабак (ЖРТ ПРАКТИКА 3) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_15_7" />
+                <a href="https://youtu.be/TsfNiw21s2A" class="text-blue-500 hover:underline">7-сабак (ЖРТ ПРАКТИКА 4) </a>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Course 16 -->
+      <div class="course-section mb-8">
+        <h2 class="text-2xl font-bold text-orange-500">16-БӨЛҮМ ДАРАЖА</h2>
+        <button class="toggle-btn text-sm text-gray-600">Ачуу ▼</button>
+        <div class="topics-list hidden pl-4">
+          <ul>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_16_1" />
+                <a href="https://youtu.be/-c3YBu4CJRk" class="text-blue-500 hover:underline">1-сабак(даража кайталоо) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_16_2" />
+                <a href="https://youtu.be/kqUXJB05h-0" class="text-blue-500 hover:underline">2-сабак(Даражалардын толук касиеттери) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_16_3" />
+                <a href="https://youtu.be/0B6CtV0BVGI" class="text-blue-500 hover:underline">3-сабак(теорияны бекемдөө) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_16_4" />
+                <a href="https://youtu.be/WNif6o3020w" class="text-blue-500 hover:underline">4-сабак(көрсөткүчтүү теңдеме) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_16_5" />
+                <a href="https://youtu.be/FGWxsyCAgAo" class="text-blue-500 hover:underline">5-сабак(салыштыруу) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_16_6" />
+                <a href="https://youtu.be/d_WCtapp0zs" class="text-blue-500 hover:underline">6-сабак(көнүгүү 1) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_16_7" />
+                <a href="https://youtu.be/QZJWOiwPnNw" class="text-blue-500 hover:underline">7-сабак(көнүгүү 2) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_16_8" />
+                <a href="https://youtu.be/sNnH1ga8dvQ" class="text-blue-500 hover:underline">8-сабак (көнүгүү 3) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_16_9" />
+                <a href="https://youtu.be/JdI9dOYy2e4" class="text-blue-500 hover:underline">9-сабак(ЖРТ практика 1) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_16_10" />
+                <a href="https://youtu.be/c369Bduj-sU" class="text-blue-500 hover:underline">10-сабак(ЖРТ практика 2) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_16_11" />
+                <a href="https://youtu.be/giyfUzAsgqs" class="text-blue-500 hover:underline">11-сабак(ЖРТ практика 3) </a>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Course 17 -->
+      <div class="course-section mb-8">
+        <h2 class="text-2xl font-bold text-orange-500">17-БӨЛҮМ КЫСКАЧА КӨБӨЙТҮҮНҮН ФОРМУЛАЛАРЫ</h2>
+        <button class="toggle-btn text-sm text-gray-600">Ачуу ▼</button>
+        <div class="topics-list hidden pl-4">
+          <ul>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_17_1" />
+                <a href="https://youtu.be/3F9EI1XA-gA" class="text-blue-500 hover:underline">1-сабак(ККФ эки мүчөнүн квадраты)</a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_17_2" />
+                <a href="https://youtu.be/mj6ax2hQkes" class="text-blue-500 hover:underline">2-сабак(ККФ квадраттардын айырмасы) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_17_3" />
+                <a href="https://youtu.be/f6FM_2vviE8" class="text-blue-500 hover:underline">3-сабак(ККФ көнүгүү) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_17_4" />
+                <a href="https://youtu.be/1xYrCp4R37A" class="text-blue-500 hover:underline">4-сабак(ЖРТ практика 1) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_17_5" />
+                <a href="https://youtu.be/7T80kdCjhrw" class="text-blue-500 hover:underline">5-сабак(ЖРТ практика 2) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_17_6" />
+                <a href="https://youtu.be/yGzEFbx2hV8" class="text-blue-500 hover:underline">6-сабак(ЖРТ практика 3) </a>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Course 18 -->
+      <div class="course-section mb-8">
+        <h2 class="text-2xl font-bold text-orange-500">18-БӨЛҮМ ТАМЫР</h2>
+        <button class="toggle-btn text-sm text-gray-600">Ачуу ▼</button>
+        <div class="topics-list hidden pl-4">
+          <ul>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_18_1" />
+                <a href="https://youtu.be/gYXVyeFceZg" class="text-blue-500 hover:underline">1-сабак (Тамыр жөнүндө) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_18_2" />
+                <a href="https://youtu.be/_BHbD_APW7E" class="text-blue-500 hover:underline">2-сабак (Тамырга тиешелүү формулалар менен таанышуу) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_18_3" />
+                <a href="https://youtu.be/WaTfzQV2D-M" class="text-blue-500 hover:underline">3-сабак (Формуланы бекемдейбиз) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_18_4" />
+                <a href="https://youtu.be/gkfUfEUX07c" class="text-blue-500 hover:underline">4-сабак (Түйүндөш туюнтма)</a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_18_5" />
+                <a href="https://youtu.be/PHLmy0FxDv4" class="text-blue-500 hover:underline">5-сабак (Тамырды камтыган колонкалар) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_18_6" />
+                <a href="https://youtu.be/7BLtvbwfnu0" class="text-blue-500 hover:underline">6-сабак (Ироционалдуу теңдемелер) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_18_7" />
+                <a href="https://youtu.be/4GEsqFKppjQ" class="text-blue-500 hover:underline">7-сабак (Тамырга көнүгүү) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_18_8" />
+                <a href="https://youtu.be/utOFWByayDo" class="text-blue-500 hover:underline">8-сабак (ЖРТ практика 1) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_18_9" />
+                <a href="https://youtu.be/k-nFaTQgxDA" class="text-blue-500 hover:underline">9-сабак (ЖРТ практика 2) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_18_10" />
+                <a href="https://youtu.be/VN61CgaJpds" class="text-blue-500 hover:underline">10-сабак (ЖРТ практика 3) </a>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Course 19 -->
+      <div class="course-section mb-8">
+        <h2 class="text-2xl font-bold text-orange-500">19-БӨЛҮМ ФУНКЦИЯ</h2>
+        <button class="toggle-btn text-sm text-gray-600">Ачуу ▼</button>
+        <div class="topics-list hidden pl-4">
+          <ul>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_19_1" />
+                <a href="https://youtu.be/7vvDs8-EbIk" class="text-blue-500 hover:underline">1-сабак (Функциянын маани маңызы) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_19_2" />
+                <a href="https://youtu.be/CnPgY-3WqGI" class="text-blue-500 hover:underline">2-сабак (f(x) жөнүндө түшүнүк) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_19_3" />
+                <a href="https://youtu.be/uIj7nevnBQ4" class="text-blue-500 hover:underline">3-сабак (функциянын аныкталуу облусу) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_19_4" />
+                <a href="https://youtu.be/qeps8F2rq_E" class="text-blue-500 hover:underline">4-сабак (Элементардык функциянын графиги)</a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_19_5" />
+                <a href="https://youtu.be/poEJV-6o9hI" class="text-blue-500 hover:underline">5-сабак (Графиктик талдоо) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_19_6" />
+                <a href="https://youtu.be/JUKdWlH3Mc0" class="text-blue-500 hover:underline">6-сабак (Жаңы операциялар)</a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_19_7" />
+                <a href="https://youtu.be/Spm1zaxSHns" class="text-blue-500 hover:underline">7-сабак (ЖРТ ПРАКТИКА 1) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_19_8" />
+                <a href="https://youtu.be/sKzy5WNgUEc" class="text-blue-500 hover:underline">8-сабак (ЖРТ ПРАКТИКА 2) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_19_9" />
+                <a href="https://youtu.be/it0_lCfrtfs" class="text-blue-500 hover:underline">9-сабак (ЖРТ ПРАКТИКА 3) </a>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Course 20 -->
+      <div class="course-section mb-8">
+        <h2 class="text-2xl font-bold text-orange-500">20-БӨЛҮМ КВАДРАТТЫК ТЕҢДЕМЕ</h2>
+        <button class="toggle-btn text-sm text-gray-600">Ачуу ▼</button>
+        <div class="topics-list hidden pl-4">
+          <ul>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_20_1" />
+                <a href="https://www.youtube.com/watch?v=ebXJu2tx_xk&t=681s" class="text-blue-500 hover:underline">Квадраттык теңдеме (толук түшүнүк) </a>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Course 21 -->
+      <div class="course-section mb-8">
+        <h2 class="text-2xl font-bold text-orange-500">21-БӨЛҮМ КӨПТҮКТӨР</h2>
+        <button class="toggle-btn text-sm text-gray-600">Ачуу ▼</button>
+        <div class="topics-list hidden pl-4">
+          <ul>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_21_1" />
+                <a href="https://youtu.be/74rhse-EIEY" class="text-blue-500 hover:underline">1-сабак (Көптүктөргө киришүү) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_21_2" />
+                <a href="https://youtu.be/R9hAQyfXbwU" class="text-blue-500 hover:underline">2-сабак (Көптүктөргө киришүү 2) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_21_3" />
+                <a href="https://youtu.be/6vTblG50vwM" class="text-blue-500 hover:underline">3-сабак (Көптүктөр ЖРТ практика 1) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_21_4" />
+                <a href="https://youtu.be/5ZutkBcBBnM" class="text-blue-500 hover:underline">4-сабак (Көптүктөр ЖРТ практика 2) </a>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Course 22 -->
+      <div class="course-section mb-8">
+        <h2 class="text-2xl font-bold text-orange-500">22-БӨЛҮМ СТАТИСТИКА ЖАНА ДИАГРАММАЛАР</h2>
+        <button class="toggle-btn text-sm text-gray-600">Ачуу ▼</button>
+        <div class="topics-list hidden pl-4">
+          <ul>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_22_1" />
+                <a href="https://youtu.be/6oTZNc6L33k" class="text-blue-500 hover:underline">1-сабак (Статистиканын элементтери)</a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_22_2" />
+                <a href="https://youtu.be/_sOXle_ufSg" class="text-blue-500 hover:underline">2-сабак (ЖРТ практика 1) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_22_3" />
+                <a href="https://youtu.be/UuH0cp5XXcU" class="text-blue-500 hover:underline">3-сабак (ЖРТ практика 2) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_22_4" />
+                <a href="https://youtu.be/tjxwHLw1eyg" class="text-blue-500 hover:underline">4-сабак Диаграммалар (теория + практика) </a>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Course 23 -->
+      <div class="course-section mb-8">
+        <h2 class="text-2xl font-bold text-orange-500">23-БӨЛҮМ КОМБИНАТОРИКА</h2>
+        <button class="toggle-btn text-sm text-gray-600">Ачуу ▼</button>
+        <div class="topics-list hidden pl-4">
+          <ul>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_23_1" />
+                <a href="https://www.youtube.com/watch?v=aUA1Nx4lzQ0" class="text-blue-500 hover:underline">1-сабак (Комбинаторикага киришүү) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_23_2" />
+                <a href="https://youtu.be/sys855cABI4" class="text-blue-500 hover:underline">2-сабак (формуладагы айырмачылык) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_23_3" />
+                <a href="https://youtu.be/8v4cSwVtMp4" class="text-blue-500 hover:underline">3-сабак (ЖРТ практика) </a>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Course 24 -->
+      <div class="course-section mb-8">
+        <h2 class="text-2xl font-bold text-orange-500">24-БӨЛҮМ ЫКТЫМАЛДУУЛУК</h2>
+        <button class="toggle-btn text-sm text-gray-600">Ачуу ▼</button>
+        <div class="topics-list hidden pl-4">
+          <ul>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_5_1" />
+                <a href="https://youtu.be/HdkJQMa6SyI" class="text-blue-500 hover:underline">1-сабак (Ыктымалдуулукка киришүү) </a>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_5_2" />
+                <a href="https://youtu.be/J6Ojw_cOMW0" class="text-blue-500 hover:underline">2-сабак (Ыктымалдуулукка практика) </a>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Course 25 -->
+      <div class="course-section mb-8">
+        <h2 class="text-2xl font-bold text-orange-500">25-БӨЛҮМ АНАЛИТИКАЛЫК ГЕОМЕТРИЯ</h2>
+        <button class="toggle-btn text-sm text-gray-600">Ачуу ▼</button>
+        <div class="topics-list hidden pl-4">
+          <ul>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_25_1" />
+                <a href="https://www.youtube.com/watch?v=2pCmvNyXqQI&t=910s" class="text-blue-500 hover:underline">Аналитикалык геометрия (Кыскача түшүнүк) </a>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Course 26 -->
+      <div class="course-section mb-8">
+        <h2 class="text-2xl font-bold text-orange-500">26-БӨЛҮМ АРИФМЕТИКАЛЫК ПРОГРЕССИЯ</h2>
+        <button class="toggle-btn text-sm text-gray-600">Ачуу ▼</button>
+        <div class="topics-list hidden pl-4">
+          <ul>
+            <li>
+              <label>
+                <input type="checkbox" class="watched-video" data-video="video_26_1" />
+                <a href="https://www.youtube.com/watch?v=eYp9k1guJx8&t=3179s" class="text-blue-500 hover:underline">Арифметикалык прогрессия (теория жана практикасы менен) </a>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <script>
+      document.addEventListener('DOMContentLoaded', function () {
+  // Существующий код...
+  const watchedVideos = JSON.parse(localStorage.getItem('watchedVideos')) || {};
+
+  document.querySelectorAll('.watched-video').forEach(input => {
+    const videoId = input.getAttribute('data-video');
+    if (watchedVideos[videoId]) {
+      input.checked = true;
+    }
+
+    input.addEventListener('change', function () {
+      const videoId = input.getAttribute('data-video');
+      watchedVideos[videoId] = input.checked;
+      localStorage.setItem('watchedVideos', JSON.stringify(watchedVideos));
+    });
+  });
+
+  const toggleButtons = document.querySelectorAll('.toggle-btn');
+  toggleButtons.forEach(button => {
+    button.addEventListener('click', function () {
+      const topicsList = this.nextElementSibling;
+      const isHidden = topicsList.classList.toggle('hidden');
+      this.textContent = isHidden ? 'Ачуу ▼' : 'Жабуу ▲';
+    });
+  });
+
+  // ✅ Добавлено: бургер меню логика
+  const menuToggle = document.getElementById('menu-toggle');
+  const sidebar = document.getElementById('mobile-sidebar');
+  const closeSidebar = document.getElementById('close-sidebar');
+  const overlay = document.getElementById('overlay');
+
+  menuToggle.addEventListener('click', () => {
+    sidebar.classList.remove('-translate-x-full');
+    overlay.classList.remove('hidden');
+  });
+
+  closeSidebar.addEventListener('click', () => {
+    sidebar.classList.add('-translate-x-full');
+    overlay.classList.add('hidden');
+  });
+
+  overlay.addEventListener('click', () => {
+    sidebar.classList.add('-translate-x-full');
+    overlay.classList.add('hidden');
+  });
+});
+// Издөө функционалы
+document.getElementById('searchInput').addEventListener('input', function () {
+  const query = this.value.toLowerCase();
+  const courseSections = document.querySelectorAll('.course-section');
+
+  courseSections.forEach(section => {
+    const videoLinks = section.querySelectorAll('a');
+    let sectionHasMatch = false;
+
+    videoLinks.forEach(link => {
+      const text = link.textContent.toLowerCase();
+      const parentLi = link.closest('li');
+      if (text.includes(query)) {
+        parentLi.style.display = 'block';
+        sectionHasMatch = true;
+      } else {
+        parentLi.style.display = 'none';
+      }
+    });
+
+    // Эгерде бул бөлүмдө окшош сабактар жок болсо, жашыруу
+    section.style.display = sectionHasMatch ? 'block' : 'none';
+  });
+});
+  </script>
+  
+
+</body>
+</html>
